@@ -1,12 +1,10 @@
 import React from 'react'
 import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
-
 import "./SearchBar.css"
-
-export const SearchBar = ({ setResults }) => {
+export const SearchBar = ({ setResults}) => {
     
-    const[input, setInput] = useState("")
+    const[input, setInput,] = useState("")
 
     const fetchData = (value)=>{
         fetch("https://jsonplaceholder.typicode.com/users")
@@ -18,9 +16,11 @@ export const SearchBar = ({ setResults }) => {
                     user &&
                     user.name &&
                     user.name.toLowerCase().includes(value)
+                    
                 )
             })
             setResults(results)
+            console.log(results)
         })
     }
     const handleChange = (value)=>{
@@ -28,8 +28,10 @@ export const SearchBar = ({ setResults }) => {
         fetchData(value)
     }
     return(
-        <div className='input-wrapper'>
-            <BiSearch size={30} className="search-icon"></BiSearch>
+        <div   
+         
+        className='input-wrapper'>
+            
             <input 
                 className='input' 
                 type='text' 
@@ -37,7 +39,13 @@ export const SearchBar = ({ setResults }) => {
                 name='s'
                 value={input}
                 onChange={(e)=>handleChange(e.target.value)}
+
+                
                 />
+            <button>
+                <BiSearch size={10} className="search-icon"></BiSearch>
+            </button>
+            
         </div>
     )
 }

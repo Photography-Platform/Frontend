@@ -1,0 +1,36 @@
+.backgroundcolor{
+    background:radial-gradient(circle farthest-corner at left,rgba(223, 254, 235, 1),rgba(255, 233, 178, 1));
+    width: 100%;
+    height: 3600px;
+    background-repeat: repeat-y;
+    
+}
+.post{
+    position: relative;
+    top: 3rem;
+    left: 20%;
+    background-color: white;
+    width: 60%;
+    height: 30em;
+    margin: 3rem;
+
+}
+.icon-heart{
+    position:absolute;
+    top: 90%;
+    left: 10%;
+    color: gray;
+    
+}
+.icon-star{
+    position:absolute;
+    top: 90%;
+    left: 0%;
+    color: gray;
+}
+.title {
+  white-space: pre-line;
+}
+.content{
+    
+}
