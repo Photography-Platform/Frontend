@@ -1,36 +1,77 @@
-.backgroundcolor{
-    background:radial-gradient(circle farthest-corner at left,rgba(223, 254, 235, 1),rgba(255, 233, 178, 1));
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.backgroundcolor {
+    background: radial-gradient(circle farthest-corner at left, rgba(223, 254, 235, 1), rgba(255, 233, 178, 1));
     width: 100%;
     height: 3600px;
     background-repeat: repeat-y;
-    
+
 }
-.post{
-    position: relative;
+
+.post {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "img article";
     top: 3rem;
     left: 20%;
     background-color: white;
-    width: 60%;
+    width: 50%;
     height: 30em;
-    margin: 3rem;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 
 }
-.icon-heart{
-    position:absolute;
+
+.icon-heart {
+    position: absolute;
     top: 90%;
     left: 10%;
     color: gray;
-    
+
 }
-.icon-star{
-    position:absolute;
+
+.icon-star {
+    position: absolute;
     top: 90%;
     left: 0%;
     color: gray;
 }
+
 .title {
-  white-space: pre-line;
+    white-space: pre-line;
+    font-size: 150%;
+    font-weight: bold;
 }
-.content{
-    
+
+.img {
+    position: relative;
+    padding: 6%;
+    width: 75%;
+    margin-left: 1%;
+}
+
+.icon {
+    position: relative;
+    margin-top: 1rem;
+    color: gray;
+}
+
+.article {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+.content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
 }
