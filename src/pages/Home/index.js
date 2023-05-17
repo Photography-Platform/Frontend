@@ -2,17 +2,22 @@
 //import List from "./components/List"
 import "./index.css"
 import Container from "./components/navbar"
-import { BrowserRouter as Router } from "react-router-dom";
 import PostList from "./PostList";
+import Frame from "../login/Frame"
+import Register from "../Register/Register";
+import {Routes, Route} from "react-router-dom";
+
 
 const Home = () => {    
     return(
-    <Router>
         <div className="backgroundcolor"> 
         <Container/>
-        <PostList/>
-        </div>
-    </Router>
+        <Routes>
+            <Route path='' element={<PostList/>} />
+            <Route path='/login' element={<Frame/>}/>
+            <Route path='/register' element={<Register/>}/>
+        </Routes>
+    </div>
     )
 }
 export default Home

@@ -15,6 +15,8 @@ const Frame = (props) => {
                         <span className={styles['text02']}>
                             <span>
                                 <span>密碼:</span>
+                                <br></br>
+                                <span></span>
                             </span>
                         </span>
                     </div>
