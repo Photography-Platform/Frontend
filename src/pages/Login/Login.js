@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Frame.module.css'
 
-const Frame = (props) => {
+const Login = () => {
     return (
         <div className={styles['container']}>
             <div className={styles['frame']}>
@@ -42,4 +42,4 @@ const Frame = (props) => {
     )
 }
 
-export default Frame
+export default Login
